@@ -5,7 +5,7 @@
       <key>Description</key>
       <string>Downloads the latest version of Microsoft's Outlook for Office 365 installer package, renames the package and uploads it to Jamf.</string>
       <key>Identifier</key>
-      <string>com.github.richardknauer.microsoftoutlook365.pkg-upload.recipe</string>
+      <string>com.github.rknauer.microsoftoutlook365.pkg-upload.recipe</string>
       <key>Input</key>
       <dict>
          <key>NAME</key>
@@ -22,7 +22,7 @@
       <key>MinimumVersion</key>
       <string>1.0.0</string>
       <key>ParentRecipe</key>
-      <string>com.github.richardknauer.microsoftoutlook365.download.recipe</string>
+      <string>com.github.rknauer.microsoftoutlook365.download.recipe</string>
       <key>Process</key>
       <array>
          <dict>
