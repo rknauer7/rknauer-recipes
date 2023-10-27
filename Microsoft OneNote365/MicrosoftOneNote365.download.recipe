@@ -3,7 +3,7 @@
 <plist version="1.0">
    <dict>
       <key>Description</key>
-      <string>Downloads the latest Microsoft OneNote installer package for Office 365.</string>
+      <string>Downloads the latest Microsoft OneNote Installer package for Office 365.</string>
       <key>Identifier</key>
       <string>com.github.rknauer.microsoftonenote365.download.recipe</string>
       <key>MinimumVersion</key>
