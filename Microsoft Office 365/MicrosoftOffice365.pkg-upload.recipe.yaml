@@ -1,0 +1,12 @@
+Description: Links to rtrouton's verified Office 365 Suite package track to inherit reliable build manifest parameters for Jamf Pro.
+Identifier: com.github.rknauer.MicrosoftOffice365.pkg-upload
+Input:
+  CATEGORY: Apps
+MinimumVersion: '2.0.0'
+ParentRecipe: com.github.rtrouton.pkg.MicrosoftOfficeSuite
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+    Arguments:
+      pkg_path: '%pathname%'
+      pkg_category: '%CATEGORY%'
+      pkg_name: '%NAME%-%version%.pkg'
