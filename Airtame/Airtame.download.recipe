@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest production version of Airtame and packages it.</string>
+    <string>Downloads the latest production version of Airtame using their direct version metadata JSON endpoint.</string>
     <key>Identifier</key>
     <string>com.github.rknauer.Airtame.download.recipe</string>
     <key>Input</key>
@@ -15,15 +15,15 @@
     <string>2.0.0</string>
     <key>Process</key>
     <array>
-     <dict>
+        <dict>
             <key>Processor</key>
             <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://airtame.com/download/</string>
+                <string>https://downloads-cdn.airtame.com/application/ga/mac/latest-mac.json</string>
                 <key>re_pattern</key>
-                <string>(?P&lt;url&gt;https://downloads\.airtame\.com/application/[a-zA-Z0-9_\/\.-]+/Airtame-[0-9\.]+\.dmg)</string>
+                <string>"version"\s*:\s*"(?P&lt;version&gt;[0-9\.]+)"[\s\S]*?"url"\s*:\s*"(?P&lt;url&gt;https://downloads-cdn\.airtame\.com/application/ga/mac/Airtame-[0-9\.]+\.dmg)"</string>
             </dict>
         </dict>
         <dict>
