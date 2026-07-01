@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Airtame application disk image and bundles it into a package.</string>
+    <string>Downloads the latest production version of Airtame and packages it.</string>
     <key>Identifier</key>
     <string>com.github.rknauer.Airtame.download.recipe</string>
     <key>Input</key>
@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Airtame</string>
         <key>DOWNLOAD_URL</key>
-        <string>https://downloads.airtame.com/application/ga/mac/latest/Airtame.dmg</string>
+        <string>https://downloads.airtame.com/get-app/mac</string>
     </dict>
     <key>MinimumVersion</key>
     <string>2.0.0</string>
