@@ -1,0 +1,11 @@
+Description: Links to homebysix's FileZilla architecture parsing track to handle the package assembly and upload safely.
+Identifier: com.github.rknauer.FileZilla.pkg-upload
+Input:
+  CATEGORY: Apps
+MinimumVersion: '2.0.0'
+ParentRecipe: com.github.homebysix.pkg.FileZilla
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+    Arguments:
+      pkg_category: '%CATEGORY%'
+      pkg_name: '%NAME%-%version%.pkg'
