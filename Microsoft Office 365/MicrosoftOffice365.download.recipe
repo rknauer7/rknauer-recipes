@@ -21,9 +21,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-9503317F16FA/MacAutoupdate/0409MSOC19.xml</string>
+                <string>https://macadmins.software/latest.xml</string>
                 <key>re_pattern</key>
-                <string>&lt;key&gt;version&lt;/key&gt;\s*&lt;string&gt;(?P&lt;version&gt;[0-9\.]+)&lt;/string&gt;[\s\S]*?&lt;key&gt;url&lt;/key&gt;\s*&lt;string&gt;(?P&lt;url&gt;https://officecdnmac\.microsoft\.com/pr/[A-Za-z0-9-]+/[A-Za-z0-9_.-]+\.pkg)&lt;/string&gt;</string>
+                <string>&lt;id&gt;com\.microsoft\.office\.suite\.2016&lt;/id&gt;\s*&lt;version&gt;(?P&lt;version&gt;[0-9\.]+)&lt;/version&gt;\s*&lt;url&gt;(?P&lt;url&gt;https://go\.microsoft\.com/fwlink/\?linkid=[0-9]+)&lt;/url&gt;</string>
             </dict>
         </dict>
         <dict>
