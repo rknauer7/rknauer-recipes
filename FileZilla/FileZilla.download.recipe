@@ -28,11 +28,13 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>URLDownloader</string>
+            <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
-                <key>filename</key>
-                <string>%NAME%.tar.bz2</string>
+                <key>url</key>
+                <string>https://filezilla-project.org/download.php?platform=osx</string>
+                <key>re_pattern</key>
+                <string>href="(?P&lt;url&gt;https://[a-zA-Z0-9\.-]+/client/FileZilla_[0-9\.]+_macos-arm64\.app\.tar\.bz2\?download)"</string>
             </dict>
         </dict>
         <dict>
