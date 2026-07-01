@@ -1,0 +1,11 @@
+Description: Links to homebysix's Airtame JSON crawler track to handle dynamic downloads and package handoffs securely.
+Identifier: com.github.rknauer.Airtame.pkg-upload
+Input:
+  CATEGORY: Apps
+MinimumVersion: '2.0.0'
+ParentRecipe: com.github.homebysix.pkg.Airtame
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+    Arguments:
+      pkg_category: '%CATEGORY%'
+      pkg_name: '%NAME%-%version%.pkg'
