@@ -3,7 +3,7 @@ Identifier: com.github.rknauer.MicrosoftOffice365.pkg-upload
 Input:
   CATEGORY: Apps
 MinimumVersion: '2.0.0'
-ParentRecipe: com.github.rtrouton.pkg.MicrosoftOfficeSuite
+ParentRecipe: com.github.rtrouton.download.MicrosoftOffice365Suite
 Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
