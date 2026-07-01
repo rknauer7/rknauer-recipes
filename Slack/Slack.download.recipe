@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Slack and creates a package.</string>
     <key>Identifier</key>
-    <string>com,github.rknauer.Slack.download.recipe</string>
+    <string>com.github.rknauer.Slack.download.recipe</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
