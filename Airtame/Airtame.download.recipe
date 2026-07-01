@@ -15,7 +15,7 @@
     <string>2.0.0</string>
     <key>Process</key>
     <array>
-        <dict>
+        <<dict>
             <key>Processor</key>
             <string>URLTextSearcher</string>
             <key>Arguments</key>
