@@ -3,15 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Microsoft Office 365 Suite installer package and extracts the version info.</string>
+    <string>Downloads the latest Microsoft Office 365 Suite installer package and extracts the version info via macadmins XML feed.</string>
     <key>Identifier</key>
     <string>com.github.rknauer.MicrosoftOffice365.download.recipe</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>Microsoft Office 365</string>
-        <key>DOWNLOAD_URL</key>
-        <string>https://go.microsoft.com/fwlink/?linkid=525133</string>
     </dict>
     <key>MinimumVersion</key>
     <string>2.0.0</string>
@@ -19,11 +17,20 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>URLDownloader</string>
+            <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
+                <string>https://macadmins.software/latest.xml</string>
+                <key>re_pattern</key>
+                <string>&lt;id&gt;com\.microsoft\.office\.suite\.2016&lt;/id&gt;\s*&lt;version&gt;(?P&lt;version&gt;[0-9\.]+)&lt;/version&gt;\s*&lt;url&gt;(?P&lt;url&gt;https://go\.microsoft\.com/fwlink/\?linkid=[0-9]+)&lt;/url&gt;</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
                 <key>filename</key>
                 <string>Office365Suite.pkg</string>
             </dict>
@@ -43,37 +50,6 @@
                 <array>
                     <string>Developer ID Installer: Microsoft Corporation (UBF8T346G9)</string>
                     <string>Apple Root CA</string>
-                </array>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
-            <key>Arguments</key>
-            <dict>
-                <key>flat_pkg_path</key>
-                <string>%pathname%</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>com.github.grahampugh.recipes.postprocessors/DistributionXmlParser</string>
-            <key>Arguments</key>
-            <dict>
-                <key>distribution_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/Distribution</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>PathDeleter</string>
-            <key>Arguments</key>
-            <dict>
-                <key>path_list</key>
-                <array>
-                    <string>%RECIPE_CACHE_DIR%/unpack</string>
                 </array>
             </dict>
         </dict>
