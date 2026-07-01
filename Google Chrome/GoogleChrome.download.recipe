@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the platform-agnostic stable Google Chrome enterprise disk image and packages it.</string>
+    <string>Downloads the stable Google Chrome enterprise bundle and confirms authenticity using core community designated requirements.</string>
     <key>Identifier</key>
     <string>com.github.rknauer.GoogleChrome.download.recipe</string>
     <key>Input</key>
