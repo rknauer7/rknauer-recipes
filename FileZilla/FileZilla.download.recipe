@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads FileZilla for Apple Silicon and wraps it in a package.</string>
+    <string>Downloads the latest FileZilla for Apple Silicon using the verified community user-agent handling track.</string>
     <key>Identifier</key>
     <string>com.github.rknauer.FileZilla.download.recipe</string>
     <key>Input</key>
@@ -21,20 +21,23 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://filezilla-project.org/download.php?platform=osx</string>
+                <string>https://filezilla-project.org/download.php?show_all=1</string>
                 <key>re_pattern</key>
                 <string>href="(?P&lt;url&gt;https://dl[0-9]\.filezilla-project\.org/client/FileZilla_[0-9\.]+_macos-arm64\.app\.tar\.bz2\?download)"</string>
+                <key>request_headers</key>
+                <dict>
+                    <key>user-agent</key>
+                    <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15</string>
+                </dict>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
-            <string>URLTextSearcher</string>
+            <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-                <key>url</key>
-                <string>https://filezilla-project.org/download.php?platform=osx</string>
-                <key>re_pattern</key>
-                <string>href="(?P&lt;url&gt;https://[a-zA-Z0-9\.-]+/client/FileZilla_[0-9\.]+_macos-arm64\.app\.tar\.bz2\?download)"</string>
+                <key>filename</key>
+                <string>%NAME%.tar.bz2</string>
             </dict>
         </dict>
         <dict>
