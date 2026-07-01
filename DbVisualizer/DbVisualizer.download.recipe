@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest DbVisualizer disk image and builds a package using updated site regex parameters.</string>
+    <string>Downloads the latest version of DbVisualizer package using community string matching parameters.</string>
     <key>Identifier</key>
     <string>com.github.rknauer.DbVisualizer.download.recipe</string>
     <key>Input</key>
@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://www.dbvis.com/download/</string>
                 <key>re_pattern</key>
-                <string>(?P&lt;url&gt;https://media\.dbvis\.com/download/dbvis-[0-9\.]+/dbvis-[a-zA-Z0-9_\.-]+\.dmg)</string>
+                <string>href="(?P&lt;url&gt;https://media\.dbvis\.com/download/dbvis-[0-9\.]+/dbvis-macos-[0-9\.]+(?:_universal)?\.dmg)"</string>
             </dict>
         </dict>
         <dict>
