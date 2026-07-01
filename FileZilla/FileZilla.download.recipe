@@ -21,9 +21,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://filezilla-project.org/download.php?show_all=1</string>
+                <string>https://filezilla-project.org/download.php?platform=osx</string>
                 <key>re_pattern</key>
-                <string>href="(?P&lt;url&gt;https://dl[0-9].filezilla-project.org/client/FileZilla_[0-9\.]+_macos-arm64\.app\.tar\.bz2\?download)"</string>
+                <string>href="(?P&lt;url&gt;https://dl[0-9]\.filezilla-project\.org/client/FileZilla_[0-9\.]+_macos-arm64\.app\.tar\.bz2\?download)"</string>
             </dict>
         </dict>
         <dict>
