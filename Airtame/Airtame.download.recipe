@@ -10,8 +10,6 @@
     <dict>
         <key>NAME</key>
         <string>Airtame</string>
-        <key>DOWNLOAD_URL</key>
-        <string>https://downloads.airtame.com/get-app/mac</string>
     </dict>
     <key>MinimumVersion</key>
     <string>2.0.0</string>
@@ -19,11 +17,20 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>URLDownloader</string>
+            <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
+                <string>https://airtame.com/download/</string>
+                <key>re_pattern</key>
+                <string>href="(?P&lt;url&gt;https://downloads\.airtame\.com/application/ga/mac/Airtame-[0-9\.]+\.dmg)"</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
