@@ -3,7 +3,7 @@ Identifier: com.github.rknauer.Slack.pkg-upload
 Input:
   CATEGORY: Apps
 MinimumVersion: '2.0.0'
-ParentRecipe: com.github.autopkg.pkg.slack
+ParentRecipe: com.github.rtrouton.download.SlackUniversal
 Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
