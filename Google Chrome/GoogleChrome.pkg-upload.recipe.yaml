@@ -3,7 +3,7 @@ Identifier: com.github.rknauer.GoogleChrome.pkg-upload
 Input:
   CATEGORY: Apps
 MinimumVersion: '2.0.0'
-ParentRecipe: com.github.autopkg.pkg.googlechrome
+ParentRecipe: com.github.autopkg.download.googlechrome
 Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
