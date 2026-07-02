@@ -3,7 +3,7 @@ Identifier: com.github.rknauer.FileZilla.pkg-upload
 Input:
   CATEGORY: Apps
 MinimumVersion: '2.0.0'
-ParentRecipe: com.github.pappirauk.FileZilla.download
+ParentRecipe: com.github.moofit-recipes.download.FileZilla-Universal
 Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
