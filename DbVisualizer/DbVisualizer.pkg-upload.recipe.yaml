@@ -3,7 +3,7 @@ Identifier: com.github.rknauer.DbVisualizer.pkg-upload
 Input:
   CATEGORY: Apps
 MinimumVersion: '2.0.0'
-ParentRecipe: com.github.homebysix.pkg.DbVisualizer
+ParentRecipe: com.facebook.autopkg.download.dbvisualizer
 Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
